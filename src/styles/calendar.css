@@ -1,0 +1,135 @@
+.week{
+    width: 100%;
+    display: inline-flex;
+}
+.day{
+    height: 130px;
+    border: 1px solid #c7c7c7;
+    width: 14.28%
+}
+
+.emptyDay{
+    height: 130px;
+    border-top: 1px solid #c7c7c7;
+    border-bottom: 1px solid #c7c7c7;
+    background: #e4e2e2;
+    width: 14.28%
+}
+
+.dayNameContainer{
+    width: 100%;
+    display: inline-flex;
+}
+.dayName{
+    text-align: center;
+    font-weight: 600;
+    padding-top: 5px;
+    height: 30px;
+    border: 1px solid #c7c7c7;
+    width: 14.28%
+}
+.dateText{
+    padding: 2px;
+    margin-bottom: 0px;
+}
+
+.scrollEvent{
+    overflow-y: scroll;
+    height: 80px;
+}
+
+.event{
+    padding: 2px;
+    display: inline-flex;
+    width: 95%;
+    background: purple;
+    border-radius: 3px;
+    margin: 2px;
+    color: white;
+}
+
+.eventText{
+    width: 70%;
+    margin-bottom: 0px;
+    padding: 2px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.editDeleteBtn{
+    width: 30%;
+    display: none;
+}
+
+.edit{
+    text-align: right;
+    width: 20%;
+    margin-left: 40%
+}
+
+.delete{
+    text-align: right;
+    width: 20%;
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.event:hover .editDeleteBtn{
+    display: inline-flex;
+}
+
+.iconSize{
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.addEvent{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    display: none;
+    text-align: right;
+    cursor: pointer;
+}
+
+.day:hover .addEvent{
+    display: block !important;
+}
+
+.modalClass{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+}
+
+.colorContainer{
+    display: inline-flex;
+}
+
+.color{
+    padding: 5px;
+    cursor: pointer;
+    width: 20px;
+    margin-left: 5px;
+    border-radius: 10px;
+    height: 20px;
+}
+
+.selectedColor{
+    border: 2px solid #050202;
+}
+
+.c1{
+    background: #c35d5d;
+}
+
+.c2{
+    background: #348ce6;
+}
+
+.c3{
+    background: #33d430;
+}
+
+.c4{
+    background: #8151de;
+}

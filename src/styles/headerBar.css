@@ -1,0 +1,22 @@
+.leftArrow{
+    float: left;
+    cursor: pointer;
+}
+
+.rightArrow{
+    float: right;
+    text-align: right !important;
+    cursor: pointer;
+}
+
+.currentDate{
+    text-align: center;
+    font-size: 60px;
+    color: #3897ff;
+}
+
+.arrows{
+    padding-top: 10px;
+    font-size: 60px !important;
+    color: red !important;
+}
