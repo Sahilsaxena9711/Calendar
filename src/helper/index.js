@@ -20,7 +20,6 @@ export const getDaysInMonth = (month, year) => {
     }
     let ans = days.reduce((resultArray, item, index) => {
         const chunkIndex = Math.floor(index / 7)
-
         if (!resultArray[chunkIndex]) {
             resultArray[chunkIndex] = []
         }
@@ -32,12 +31,19 @@ export const getDaysInMonth = (month, year) => {
 
 export const getMonth = (m) => {
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let month = months[m]
-    return month;
+    return months[m];
 }
 
 export const sortByTime = (appointmentArray) => {
     return appointmentArray.sort(function (left, right) {
         return moment.utc(left.dateTime).diff(moment.utc(right.dateTime))
     });
+}
+
+export const genetrateId = (state) => {
+    if(state.length === 0){
+        return 0;
+    }
+    let sortedData = state.sort((left, right) =>  parseInt(left.id) - parseInt(right.id));
+    return sortedData[sortedData.length -1].id + 1;
 }

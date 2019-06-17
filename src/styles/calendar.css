@@ -1,6 +1,6 @@
 .week{
     width: 100%;
-    display: inline-flex;
+    display: flex;
 }
 .day{
     height: 130px;
@@ -34,7 +34,7 @@
 }
 
 .scrollEvent{
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 80px;
 }
 

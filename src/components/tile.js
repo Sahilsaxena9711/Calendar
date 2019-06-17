@@ -20,25 +20,37 @@ export default class Tile extends React.Component{
             <div className="week">
                 {week.map((day, wkey) => (
                     <div onDragOver={(e)=>this.onDragOver(e)} onDrop={(e)=>{this.onDrop(e, day)}} className={day.date === "" ? "emptyDay" : "day"} key={wkey}>
-                    {day.date === "" ? 
-                        null : 
+                    {day.date === "" ? null 
+                        : 
                         <div>
-                            <p className="dateText">{day.date}</p>
+                            <p className="dateText">
+                                {day.date}
+                            </p>
                             <div className="scrollEvent">
                                 { appointmentArray.length === 0 ? null : appointmentArray.map((appointment, akey) => (
                                     appointment.date === day.date && appointment.month === day.month ? 
                                         <div draggable onDragStart = {(e) => this.onDragStart(e, appointment)} className="event" style={{background: appointment.color}} key={akey}>
-                                            <p className="eventText">{appointment.title} <br />{appointment.time}</p>
+                                            <p className="eventText">
+                                                {appointment.title}
+                                                <br />
+                                                {appointment.time}
+                                            </p>
                                             <div className="editDeleteBtn">
-                                                <div className="edit"><span onClick={() => this.props.editModal(appointment)} className="glyphicon iconSize glyphicon-edit"></span></div>
-                                                <div className="delete"><span onClick={() => this.props.removeAppointment(appointment.id)} className="glyphicon iconSize glyphicon-remove"></span></div>
+                                                <div className="edit">
+                                                    <span onClick={() => this.props.editModal(appointment)} className="glyphicon iconSize glyphicon-edit"/>
+                                                </div>
+                                                <div className="delete">
+                                                    <span onClick={() => this.props.removeAppointment(appointment.id)} className="glyphicon iconSize glyphicon-remove"/>
+                                                </div>
                                             </div>
                                         </div>
                                     : null
                                 ))}
                             </div>
                             <div className="row">
-                                <div onClick={() => this.props.modal(day.date)} className="col-md-2 col-md-offset-9 addEvent">+</div>
+                                <div onClick={() => this.props.modal(day.date)} className="col-md-2 col-md-offset-9 addEvent">
+                                    +
+                                </div>
                             </div>
                         </div>
                         }

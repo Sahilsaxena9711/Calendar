@@ -62,8 +62,6 @@ class Calendar extends React.Component{
     }
 
     addAppointment(data){
-        const {appointment}= this.props;
-        data.id = appointment.length === 0 ? 0 : appointment[appointment.length-1].id+1
         this.props.createAppointment(data)
     }
 
